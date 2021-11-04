@@ -16,8 +16,8 @@ import requests
 from db import init_db_command
 from user import User
 
-GOOGLE_CLIENT_ID = "804671653496-5ijg63usjlp1dqdfjjs83kdv0i5k8lki.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "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"
+GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", None)
+GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", None)
 GOOGLE_DISCOVERY_URL = (
   "https://accounts.google.com/.well-known/openid-configuration"
 )
